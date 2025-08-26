@@ -1,0 +1,3 @@
+This code sorts an array of integers using the Bubble Sort algorithm, which repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
+
+Please note that this is a simple example for educational purposes. In practice, you should use more efficient sorting algorithms like QuickSort, MergeSort or built-in methods in Java such as Arrays.sort(arr).

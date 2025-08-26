@@ -1,0 +1,73 @@
+The link below is for the Time Series Python code:
+https://github.com/ibm-granite-community/granite-timeseries-cookbook/blob/main/recipes/Time_Series/Preprocessor_Use_and_Performance_Evaluation.ipynb
+
+Show the ollama container model information
+
+docker exec -it ollama ollama show granite3-moe:1b
+  
+Advanced prompt engineering
+Chapter 5: Advanced prompt engineering
+This chapter covers IBM Granite Workshop labs setup using python code using Jupyter notebooks. 
+The notebooks can be run on a local workstation or remotely using the Google Colab service, this is used to demonstrate the prompt engineering functionality available with IBM Granite 3.0. 
+
+See:
+https://ibm.github.io/granite-workshop/pre-work/ 
+and
+https://ibm.github.io/watsonx-prompt-lab/pre-work/ 
+
+https://ibm.github.io/watsonx-prompt-lab/lab-1/ 
+
+(For Exercises see https://ibm.github.io/watsonx-prompt-lab/lab-3/  )
+
+Prompt Engineering: https://en.wikipedia.org/wiki/Prompt_engineering?utm_source=ibm_developer&utm_content=in_content_link&utm_id=tutorials_awb-local-ai-copilot-ibm-granite-code-ollama-continue
+
+Open WebUI : https://docs.openwebui.com/?utm_source=ibm_developer&utm_content=in_content_link&utm_id=tutorials_awb-local-ai-copilot-ibm-granite-code-ollama-continue
+
+docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+
+pip install open-webui
+open-webui serve
+
+open http://localhost:8080
+
+Set-up Script
+-------------
+# Install ollama
+brew install ollama
+
+# Start the ollama server in the background
+ollama serve &
+
+# Download IBM Granite models
+ollama pull granite3.1-dense:8b
+ollama pull granite3.1-dense:2b
+ollama pull granite-embedding:30m
+
+# Install continue in VS Code
+code --install-extension continue.continue
+
+# Configure continue to use the models
+printf %s\\n "{\"models\":[{\"title\":\"Granite 3.1 8b\",\"provider\":\"ollama\",\"model\":\"granite3.1-dense:8b\"}],\"customCommands\":[{\"name\":\"test\",\"prompt\":\"{{{ input }}}\n\nWrite a comprehensive set of unit tests for the selected code. It should setup, run tests that check for correctness including important edge cases, and teardown. Ensure that the tests are complete and sophisticated. Give the tests just as chat output, don't edit any file.\",\"description\":\"Write unit tests for highlighted code\"}],\"tabAutocompleteModel\":{\"title\":\"Granite 3.1 2b\",\"provider\":\"ollama\",\"model\":\"granite3.1-dense:2b\"},\"allowAnonymousTelemetry\":false,\"embeddingsProvider\":{\"provider\":\"ollama\",\"model\":\"granite-embedding:30m\",\"maxChunkSize\":512}}" > $HOME/.continue/config.json
+
+
+Build an AI strategy for your business on one collaborative AI and data platform called IBM watsonx, 
+which brings together new generative AI capabilities, powered by foundation models, and traditional 
+machine learning into a powerful platform spanning the AI lifecycle. 
+With watsonx.ai, https://www.ibm.com/products/watsonx-ai?utm_source=ibm_developer&utm_content=in_content_link&utm_id=tutorials_awb-local-ai-copilot-ibm-granite-code-ollama-continue&cm_sp=ibmdev-_-developer-tutorials-_-product
+you can train, validate, tune and deploy models with ease and build AI applications 
+in a fraction of the time with a fraction of the data. These models are accessible to all as many 
+no-code and low-code options are available for beginners.
+
+Try watsonx.ai, the next-generation studio for AI builders.
+
+https://www.ibm.com/watsonx?utm_source=ibm_developer&utm_content=in_content_link&utm_id=tutorials_awb-local-ai-copilot-ibm-granite-code-ollama-continue&cm_sp=ibmdev-_-developer-tutorials-_-ibmcom
+
+Developing a GEnerative AI application with IBM Granite
+https://developer.ibm.com/tutorials/awb-developing-gen-ai-app-ibm-granite-code
+and with Watsonx
+https://developer.ibm.com/articles/awb-enterprise-generative-ai-virtual-assistants-ibm-watsonx
+
+
+https://dataplatform.cloud.ibm.com/registration/stepone?context=wca&apps=wca,cos&regions=us-south&uucid=0e2742f903313c90&utm_content=WACWW&content_campaign_code=WACWW&cm_sp=ibmdev-_-developer-_-trial
+
+

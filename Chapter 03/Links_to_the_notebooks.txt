@@ -1,0 +1,10 @@
+
+•	Getting started with `PatchTSMixer
+https://github.com/ibm-granite/granite-tsfm/blob/main/notebooks/hfdemo/patch_tsmixer_getting_started.ipynb 
+•	Transfer learning with `PatchTSMixer` https://github.com/ibm-granite/granite-tsfm/blob/main/notebooks/hfdemo/patch_tsmixer_transfer.ipynb 
+•	Transfer learning with `PatchTST https://github.com/ibm-granite/granite-tsfm/blob/main/notebooks/hfdemo/patch_tst_transfer.ipynb 
+•	Getting started with `TinyTimeMixer (TTM)` https://github.com/ibm-granite/granite-tsfm/blob/main/notebooks/hfdemo/ttm_getting_started.ipynb
+•	`TTM` full benchmarking scripts and results are available at https://github.com/ibm-granite/granite-tsfm/tree/main/notebooks/hfdemo/tinytimemixer/full_benchmarking
+•	Google Colab Tutorials
+Run the TTM tutorial in Google Colab to build a forecasting application with the pre-trained TSFM models.
+•	TTM Colab Tutorial https://colab.research.google.com/github/ibm-granite/granite-tsfm/blob/main/notebooks/hfdemo/ttm_getting_started.ipynb
